@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .dark:root {
+    --primary-color: #0c0f11;
+    --secondary-color: #a8adb2;
+    --tertiary-color: #eef5fc;
+    --accent-color: #9296f0;
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif, Arial;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--tertiary-color);
+  }
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: #5c5c5c transparent;
+    scrollbar-width: thin;
+  }
+}

@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import Hugo from '../images/hugo.jpg'
+import SocialLink from '@components/SocialLink.astro'
+import GithubIcon from '@components/icons/GithubIcon.astro'
+import LinkedinIcon from '@components/icons/LinkedinIcon.astro'
+import MailIcon from '@components/icons/MailIcon.astro'
+import { email, github, linkedin } from '@/data/personal'
+---
+
+<section class="flex justify-center max-w-3xl gap-9">
+  <Image src={Hugo} alt="" class="rounded-lg" />
+  <div class="flex flex-col gap-3 justify-evenly">
+    <p class="text-3xl leading-10 text-secondary tracking-wide font-bold">
+      <span class="text-tertiary">Hey, I'm Hugo.</span> I'm a fullstack developer
+      and open source contributor.
+    </p>
+    <ul class="list-none flex items-center gap-6">
+      <li>
+        <SocialLink href={`mailto:${email}`}><MailIcon /> Contact me</SocialLink
+        >
+      </li>
+      <li>
+        <SocialLink href={linkedin}><LinkedinIcon /> LinkedIn</SocialLink>
+      </li>
+      <li>
+        <SocialLink href={github}><GithubIcon /> Github</SocialLink>
+      </li>
+    </ul>
+  </div>
+</section>

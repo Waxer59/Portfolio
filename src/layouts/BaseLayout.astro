@@ -1,17 +1,36 @@
 ---
+import { email, linkedin } from '@/data/personal'
 import CommonHead from '@components/CommonHead.astro'
 ---
 
 <!doctype html>
-<html>
+<html class="dark">
   <CommonHead />
-  <body>
-    <style>
-      .dark:root {
-        --primary-color: #0c0f11;
-        --secondary-color: #a8adb2;
-        --tertiary-color: #eef5fc;
-      }
-    </style>
+  <body class="bg-primary max-w-4xl mx-auto">
+    <slot />
+    <footer class="flex items-center mt-16 mb-10 justify-between">
+      <span class="text-secondary text-sm">Hugo Boyano Escoz</span>
+      <ul class="flex items-center gap-6 text-sm text-secondary font-bold">
+        <li>
+          <a href="#">Sobre mí</a>
+        </li>
+        <li>
+          <a
+            href={`mailto:${email}`}
+            target="_blank"
+            role="link"
+            rel="noopener noreferrer">Contacto</a
+          >
+        </li>
+        <li>
+          <a
+            href={linkedin}
+            target="_blank"
+            role="link"
+            rel="noopener noreferrer">LinkedIn</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

@@ -1,8 +1,17 @@
+import colors from "tailwindcss/colors"
+
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {},
+    colors: {
+      ...colors,
+      primary: 'var(--primary-color)',
+      secondary: 'var(--secondary-color)',
+      tertiary: 'var(--tertiary-color)',
+      accent: 'var(--accent-color)',
+    },
+  },
+  plugins: []
 }

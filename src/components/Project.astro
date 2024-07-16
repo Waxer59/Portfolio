@@ -30,14 +30,16 @@ if (!img)
   )
 ---
 
-<li class="flex gap-8">
-  <Image
-    src={img()}
-    alt=""
-    class="object-cover w-full md:w-[450px] h-56 transition duration-500 rounded-md"
-  />
+<li class="flex flex-col md:flex-row gap-8 group">
+  <div class="overflow-hidden rounded-md">
+    <Image
+      src={img()}
+      alt=""
+      class="object-cover w-full md:w-[450px] h-56 transition duration-500 overflow-hidden group-hover:scale-105"
+    />
+  </div>
   <div class="flex flex-col gap-4 md:w-1/2">
-    <h3 class="text-tertiary text-2xl font-bold">{title}</h3>
+    <h3 class="text-tertiary text-2xl font-bold capitalize">{title}</h3>
     <ul class="flex gap-2 flex-wrap">
       {
         tags.map((tag) => (

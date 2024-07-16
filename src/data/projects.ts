@@ -48,6 +48,15 @@ export const projects: ProjectDetails[] = [
     }
   },
   {
+    title: 'DockerHook',
+    description: '...',
+    tags: [TAGS.golang!],
+    imgFile: 'dockerhook.webp',
+    links: {
+      github: 'https://github.com/Waxer59/DockerHook'
+    }
+  },
+  {
     title: 'DinamicJS',
     description: '...',
     tags: [TAGS.react!, TAGS.redux!],
@@ -67,6 +76,16 @@ export const projects: ProjectDetails[] = [
     }
   },
   {
+    title: 'Babel Plugin Auto Console Log',
+    description: '...',
+    tags: [TAGS.babel!, TAGS.npm!],
+    imgFile: 'babelPluginAutoConsoleLog.webp',
+    links: {
+      github: 'https://github.com/Waxer59/babel-plugin-auto-console-log',
+      preview: 'https://www.npmjs.com/package/babel-plugin-auto-console-log'
+    }
+  },
+  {
     title: 'Photo Display',
     description: '...',
     tags: [
@@ -82,7 +101,7 @@ export const projects: ProjectDetails[] = [
     }
   },
   {
-    title: 'Discord bot',
+    title: 'Discord Bot',
     description: '...',
     tags: [TAGS.nodejs!, TAGS.docker!, TAGS.mongodb!, TAGS.redis!],
     imgFile: 'discordBot.webp',

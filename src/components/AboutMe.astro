@@ -1,8 +1,33 @@
 ---
+import { Image } from 'astro:assets'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
 import UserIcon from './icons/UserIcon.astro'
+import HugoAboutMe from '../images/hugo_about_me.webp'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<h2
-  class="text-tertiary text-3xl font-bold uppercase tracking-wider flex items-center gap-4">
-  <UserIcon class="w-9 h-9" /> About me
-</h2>
+<section>
+  <h2
+    class="text-tertiary text-3xl font-bold uppercase tracking-wider flex items-center gap-4"
+    id={t('nav.aboutMe')}>
+    <UserIcon class="w-9 h-9" />
+    {t('nav.aboutMe')}
+  </h2>
+  <article
+    class="flex flex-col md:flex-row items-center gap-8 text-secondary mt-6">
+    <div class="order-2 md:order-1 text-pretty text-lg">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aperiam
+        nesciunt doloribus quod officia labore, ex tempora ut ea, commodi
+        voluptatibus. Laborum omnis error eum quae velit minus id ad!
+      </p>
+    </div>
+    <Image
+      src={HugoAboutMe}
+      alt=""
+      class="object-cover w-72 rounded-2xl ring-1 ring-black/70 dark:ring-white/20 rotate-3 aspect-square p-1 lg:p-2 dark:bg-stone-700/25 order-1 md:order-2"
+    />
+  </article>
+</section>

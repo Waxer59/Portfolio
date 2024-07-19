@@ -1,7 +1,11 @@
 ---
-import BackToTop from '@/components/BackToTop.astro'
 import { email, linkedin } from '@/data/personal'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+import BackToTop from '@components/BackToTop.astro'
 import CommonHead from '@components/CommonHead.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <!doctype html>
@@ -14,20 +18,25 @@ import CommonHead from '@components/CommonHead.astro'
       <span class="text-secondary text-sm">Hugo Boyano Escoz</span>
       <ul class="flex items-center gap-6 text-sm text-secondary font-bold">
         <li>
-          <a href="#">Sobre mí</a>
+          <a
+            href={`${t('nav.aboutMe')}`}
+            class="hover:text-accent transition-colors">{t('nav.aboutMe')}</a
+          >
         </li>
         <li>
           <a
             href={`mailto:${email}`}
             target="_blank"
+            class="hover:text-accent transition-colors"
             role="link"
-            rel="noopener noreferrer">Contacto</a
+            rel="noopener noreferrer">{`${t('nav.contact')}`}</a
           >
         </li>
         <li>
           <a
             href={linkedin}
             target="_blank"
+            class="hover:text-accent transition-colors"
             role="link"
             rel="noopener noreferrer">LinkedIn</a
           >

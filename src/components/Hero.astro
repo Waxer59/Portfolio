@@ -1,23 +1,30 @@
 ---
 import { Image } from 'astro:assets'
+import { email, github, linkedin } from '@/data/personal'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
 import Hugo from '../images/hugo.jpg'
 import SocialLink from '@components/SocialLink.astro'
 import GithubIcon from '@components/icons/GithubIcon.astro'
 import LinkedinIcon from '@components/icons/LinkedinIcon.astro'
 import MailIcon from '@components/icons/MailIcon.astro'
-import { email, github, linkedin } from '@/data/personal'
+import RssIcon from '@components/icons/RssIcon.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<section class="flex justify-center max-w-3xl gap-9">
+<section
+  class="flex flex-col sm:flex-row items-center justify-center max-w-3xl gap-9">
   <Image src={Hugo} alt="" class="rounded-lg" />
   <div class="flex flex-col gap-3 justify-evenly">
     <p class="text-3xl leading-10 text-secondary tracking-wide font-bold">
       <span class="text-tertiary">Hey, I'm Hugo.</span> I'm a fullstack developer
       and open source contributor.
     </p>
-    <ul class="list-none flex items-center gap-6">
+    <ul class="list-none flex items-center gap-6 flex-wrap">
       <li>
-        <SocialLink href={`mailto:${email}`}><MailIcon /> Contact me</SocialLink
+        <SocialLink href={`mailto:${email}`}
+          ><MailIcon /> {t('hero.contactMe')}</SocialLink
         >
       </li>
       <li>
@@ -25,6 +32,9 @@ import { email, github, linkedin } from '@/data/personal'
       </li>
       <li>
         <SocialLink href={github}><GithubIcon /> Github</SocialLink>
+      </li>
+      <li>
+        <SocialLink href="https://blog.hgo.one"><RssIcon /> Blog</SocialLink>
       </li>
     </ul>
   </div>

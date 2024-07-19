@@ -14,7 +14,7 @@ export const projects: ProjectDetails[] = [
   {
     title: 'Proyectos Solidarios',
     description: '...',
-    tags: [TAGS.astro!],
+    tags: [TAGS.astro!, TAGS.docker!],
     imgFile: 'proyectosSolidarios.webp',
     links: {
       github:
@@ -50,7 +50,7 @@ export const projects: ProjectDetails[] = [
   {
     title: 'DockerHook',
     description: '...',
-    tags: [TAGS.golang!],
+    tags: [TAGS.golang!, TAGS.docker!],
     imgFile: 'dockerhook.webp',
     links: {
       github: 'https://github.com/Waxer59/DockerHook'

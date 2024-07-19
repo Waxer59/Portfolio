@@ -1,4 +1,4 @@
-import colors from "tailwindcss/colors"
+import colors from 'tailwindcss/colors'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,8 +10,9 @@ export default {
       primary: 'var(--primary-color)',
       secondary: 'var(--secondary-color)',
       tertiary: 'var(--tertiary-color)',
-      accent: 'var(--accent-color)',
-    },
+      accent: 'var(--accent-color)'
+    }
   },
+  darkMode: ['selector', 'html[class="dark"]'],
   plugins: []
 }

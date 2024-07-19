@@ -1,10 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
 import { Image } from 'astro:assets'
+import type { TagDetails } from '../types/types'
+import type { ImageMetadata } from 'astro'
 import LinkButton from '@components/LinkButton.astro'
 import GithubIcon from '@components/icons/GithubIcon.astro'
 import LinkIcon from '@components/icons/LinkIcon.astro'
-import type { TagDetails } from '../types/types'
-import type { ImageMetadata } from 'astro'
 
 interface Props {
   title: string
@@ -24,14 +25,18 @@ const imgs = import.meta.glob<{ default: ImageMetadata }>(
   '/src/images/projects/*.{jpeg,jpg,png,gif,webp}'
 )
 const img = imgs[imgPath]
-if (!img)
+if (!img) {
   throw new Error(
     `"${imgPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
   )
+}
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <li class="flex flex-col md:flex-row gap-8 group">
-  <div class="overflow-hidden rounded-md">
+  <div class="overflow-hidden rounded-md shadow-lg dark:shadow-none">
     <Image
       src={img()}
       alt=""
@@ -61,7 +66,7 @@ if (!img)
         links?.github && (
           <LinkButton href={links.github}>
             <GithubIcon />
-            Code
+            {t('project.code')}
           </LinkButton>
         )
       }
@@ -69,7 +74,7 @@ if (!img)
         links?.preview && (
           <LinkButton href={links.preview}>
             <LinkIcon />
-            Preview
+            {t('project.preview')}
           </LinkButton>
         )
       }

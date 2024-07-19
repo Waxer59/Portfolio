@@ -1,5 +1,31 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { languages } from '@i18n/ui'
+import { getLangFromUrl } from '@i18n/utils'
 
+const currentLang = getLangFromUrl(Astro.url)
+
+// Get route withoute the language in the URL
+const route = Astro.url.pathname.replace(`/${currentLang}`, '')
 ---
 
-<a href="#">ES | EN</a>
+<ul class="flex items-center gap-1">
+  {
+    Object.entries(languages).map(([lang, label], idx, arr) => (
+      <>
+        <li>
+          <a
+            href={getRelativeLocaleUrl(lang, route)}
+            class={`${currentLang === lang ? 'font-bold' : ''} uppercase hover:text-accent transition-colors`}>
+            {label}
+          </a>
+        </li>
+        {idx < arr.length - 1 && (
+          <li>
+            <span>|</span>
+          </li>
+        )}
+      </>
+    ))
+  }
+</ul>

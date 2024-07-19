@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
 import BookIcon from '@components/icons/BookIcon.astro'
 import ToolsIcon from '@components/icons/ToolsIcon.astro'
 import MonitorIcon from '@components/icons/MonitorIcon.astro'
@@ -31,13 +32,19 @@ import DockerIcon from '@components/icons/DockerIcon.astro'
 import GitIcon from '@components/icons/GitIcon.astro'
 import GithubLogoIcon from '@components/icons/GithubLogoIcon.astro'
 import JestIcon from '@components/icons/JestIcon.astro'
-import Tooltip from './Tooltip.astro'
+import Tooltip from '@components/Tooltip.astro'
+import AstroDarkIcon from '@components/icons/AstroDarkIcon.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <section>
   <h2
-    class="text-tertiary text-3xl font-bold uppercase tracking-wider flex items-center gap-4">
-    <ToolsIcon class="w-9 h-9" /> Skillset
+    class="text-tertiary text-3xl font-bold uppercase tracking-wider flex items-center gap-4"
+    id={t('nav.skillset')}>
+    <ToolsIcon class="w-9 h-9" />
+    {t('nav.skillset')}
   </h2>
   <ul class="flex flex-col gap-8 mt-6">
     <li>
@@ -45,7 +52,7 @@ import Tooltip from './Tooltip.astro'
         class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
         <BookIcon /> Languages
       </h3>
-      <ul class="flex gap-3 mt-4">
+      <ul class="flex flex-wrap gap-3 mt-4">
         <li>
           <Tooltip text="JavaScript">
             <JavascriptIcon class="w-10 h-10 rounded" />
@@ -73,7 +80,7 @@ import Tooltip from './Tooltip.astro'
         class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
         <MonitorIcon /> Frontend
       </h3>
-      <ul class="flex gap-3 mt-4">
+      <ul class="flex flex-wrap gap-3 mt-4">
         <li>
           <Tooltip text="HTML">
             <HtmlIcon class="w-10 h-10" />
@@ -111,7 +118,8 @@ import Tooltip from './Tooltip.astro'
         </li>
         <li>
           <Tooltip text="AstroJS">
-            <AstroIcon class="w-10 h-10" />
+            <AstroIcon class="w-10 h-10 hidden dark:block" />
+            <AstroDarkIcon class="w-10 h-10 block dark:hidden" />
           </Tooltip>
         </li>
         <li>
@@ -126,7 +134,7 @@ import Tooltip from './Tooltip.astro'
         class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
         <ServerIcon /> Backend
       </h3>
-      <ul class="flex gap-3 mt-4">
+      <ul class="flex flex-wrap gap-3 mt-4">
         <li>
           <Tooltip text="NodeJS">
             <NodejsIcon class="w-10 h-10" />
@@ -134,7 +142,7 @@ import Tooltip from './Tooltip.astro'
         </li>
         <li>
           <Tooltip text="ExpressJS">
-            <ExpressIcon class="w-10 h-10" />
+            <ExpressIcon class="w-10 h-10 invert dark:invert-0" />
           </Tooltip>
         </li>
         <li>
@@ -169,7 +177,7 @@ import Tooltip from './Tooltip.astro'
         </li>
         <li>
           <Tooltip text="Socket.io">
-            <SocketioIcon class="w-10 h-10 fill-white" />
+            <SocketioIcon class="w-10 h-10 fill-white invert dark:invert-0" />
           </Tooltip>
         </li>
         <li>
@@ -184,7 +192,7 @@ import Tooltip from './Tooltip.astro'
         class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
         <CloudIcon /> Devops
       </h3>
-      <ul class="flex gap-3 mt-4">
+      <ul class="flex flex-wrap gap-3 mt-4">
         <li>
           <Tooltip text="Docker">
             <DockerIcon class="w-10 h-10" />
@@ -197,7 +205,7 @@ import Tooltip from './Tooltip.astro'
         </li>
         <li>
           <Tooltip text="Github">
-            <GithubLogoIcon class="w-10 h-10 fill-white" />
+            <GithubLogoIcon class="w-10 h-10 fill-white invert dark:invert-0" />
           </Tooltip>
         </li>
         <li>

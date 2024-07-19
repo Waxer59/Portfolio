@@ -2,12 +2,24 @@
 import '@styles/global.css'
 import { Head } from 'astro-capo'
 import { ViewTransitions } from 'astro:transitions'
+import { cannonicalURL } from '@/constants/seo'
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+
+const currentLang = getLangFromUrl(Astro.url)
+const t = useTranslations(currentLang)
+
+const localeCode = {
+  es: 'es_ES',
+  en: 'en_US'
+} as const
 
 interface Props {
   title?: string
 }
 
 const { title = "Hugo's portfolio" } = Astro.props
+
+const ogUrlImg = 'https://hgo.one/images/og.png'
 ---
 
 <Head>
@@ -17,6 +29,23 @@ const { title = "Hugo's portfolio" } = Astro.props
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="canonical" href={cannonicalURL} />
+  <meta name="keywords" content="" />
+
+  <meta name="description" content={t('meta.description')} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={t('meta.description')} />
+  <meta name="twitter:image" content={ogUrlImg} />
+
+  <meta property="og:image" content={ogUrlImg} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={t('meta.description')} />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:site_name" content={title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content={localeCode[currentLang]} />
 
   <ViewTransitions />
 </Head>

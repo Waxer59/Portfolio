@@ -19,14 +19,12 @@ const t = useTranslations(lang)
     class="flex flex-col md:flex-row items-center gap-8 text-secondary mt-6">
     <div class="order-2 md:order-1 text-pretty text-lg">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aperiam
-        nesciunt doloribus quod officia labore, ex tempora ut ea, commodi
-        voluptatibus. Laborum omnis error eum quae velit minus id ad!
+        {t('aboutMe.description')}
       </p>
     </div>
     <Image
       src={HugoAboutMe}
-      alt=""
+      alt={t('aboutMe.photo.alt')}
       class="object-cover w-72 rounded-2xl ring-1 ring-black/70 dark:ring-white/20 rotate-3 aspect-square p-1 lg:p-2 dark:bg-stone-700/25 order-1 md:order-2"
     />
   </article>

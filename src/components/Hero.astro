@@ -15,11 +15,16 @@ const t = useTranslations(lang)
 
 <section
   class="flex flex-col sm:flex-row items-center justify-center max-w-3xl gap-9">
-  <Image src={Hugo} alt="" class="rounded-lg" />
+  <Image
+    src={Hugo}
+    alt={t('hero.photo.alt')}
+    class="rounded-lg"
+    loading="eager"
+  />
   <div class="flex flex-col gap-3 justify-evenly">
     <p class="text-3xl leading-10 text-secondary tracking-wide font-bold">
-      <span class="text-tertiary">Hey, I'm Hugo.</span> I'm a fullstack developer
-      and open source contributor.
+      <span class="text-tertiary">{t('hero.salute')}</span>
+      {t('hero.description')}
     </p>
     <ul class="list-none flex items-center gap-6 flex-wrap">
       <li>

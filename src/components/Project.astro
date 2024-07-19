@@ -39,7 +39,7 @@ const t = useTranslations(lang)
   <div class="overflow-hidden rounded-md shadow-lg dark:shadow-none">
     <Image
       src={img()}
-      alt=""
+      alt={`${t('alt.project')} '${title}`}
       class="object-cover w-full md:w-[450px] h-56 transition duration-500 overflow-hidden group-hover:scale-105"
     />
   </div>

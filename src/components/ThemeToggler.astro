@@ -1,9 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
 import MoonIcon from '@components/icons/MoonIcon.astro'
 import SunIcon from '@components/icons/SunIcon.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<button id="btn-theme-toggler">
+<button id="btn-theme-toggler" aria-label={t('aria.switchTheme')}>
   <span id="theme-toggler-dark-icon" class="hidden dark:block">
     <MoonIcon class="hover:text-accent transition-colors" />
   </span>

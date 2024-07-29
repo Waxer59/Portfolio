@@ -18,7 +18,7 @@ const t = useTranslations(lang)
     <button
       id="btn-menu-close"
       class="hover:text-accent ml-auto md:hidden transition-colors"
-      ><XMarkIcon class="w-9 h-9" /></button
+      aria-label={t('aria.closeMenu')}><XMarkIcon class="w-9 h-9" /></button
     >
     <a
       href={`#${t('nav.projects')}`}
@@ -36,7 +36,7 @@ const t = useTranslations(lang)
     <button
       id="btn-menu"
       class="block md:hidden cursor-pointer hover:text-accent transition-colors"
-      ><HamburguerMenuIcon /></button
+      aria-label={t('aria.closeMenu')}><HamburguerMenuIcon /></button
     >
     <LanguageSwitch />
     <ThemeToggler />

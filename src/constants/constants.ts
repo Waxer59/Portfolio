@@ -39,7 +39,7 @@ export const TAGS: TagKeyDetails = {
   },
   golang: {
     name: 'Golang',
-    class: 'bg-cyan-600 text-white fill-white',
+    class: 'bg-cyan-700 text-white fill-white',
     icon: GoIcon
   },
   nestjs: {
@@ -54,7 +54,7 @@ export const TAGS: TagKeyDetails = {
   },
   docker: {
     name: 'Docker',
-    class: 'bg-sky-600 text-white',
+    class: 'bg-sky-700 text-white',
     icon: DockerIcon
   },
   astro: {
@@ -69,7 +69,7 @@ export const TAGS: TagKeyDetails = {
   },
   redux: {
     name: 'Redux',
-    class: 'bg-purple-500 text-white',
+    class: 'bg-purple-700 text-white',
     icon: ReduxIcon
   },
   babel: {
@@ -84,7 +84,7 @@ export const TAGS: TagKeyDetails = {
   },
   mongodb: {
     name: 'MongoDB',
-    class: 'bg-green-600 text-white',
+    class: 'bg-green-700 text-white',
     icon: MongodbIcon
   },
   nodejs: {

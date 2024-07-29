@@ -25,7 +25,11 @@ export const ui = {
     'hero.description':
       'Desarrollador fullstack y colaborador de código abierto.',
     'og.description':
-      '¡Hola, soy Hugo! Desarrollador web con experiencia en liderazgo de equipos ágiles. Participación en proyectos de código abierto y creación de productos web innovadores.'
+      '¡Hola, soy Hugo! Desarrollador web con experiencia en liderazgo de equipos ágiles. Participación en proyectos de código abierto y creación de productos web innovadores.',
+    'aria.backToTop': 'Volver al inicio',
+    'aria.openMenu': 'Abrir menú',
+    'aria.closeMenu': 'Cerrar menú',
+    'aria.switchTheme': 'Cambiar tema'
   },
   en: {
     'page.title': "Hugo's portfolio - Software Developer",
@@ -45,6 +49,10 @@ export const ui = {
     'hero.salute': "Hey, I'm Hugo.",
     'hero.description': 'Fullstack developer and open source contributor.',
     'og.description':
-      "Hi, I'm Hugo! Web developer with experience in agile team leadership. Participation in open source projects and creation of innovative web products."
+      "Hi, I'm Hugo! Web developer with experience in agile team leadership. Participation in open source projects and creation of innovative web products.",
+    'aria.backToTop': 'Back to top',
+    'aria.openMenu': 'Open menu',
+    'aria.closeMenu': 'Close menu',
+    'aria.switchTheme': 'Switch theme'
   }
 } as const

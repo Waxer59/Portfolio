@@ -1,7 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
 import { Image } from 'astro:assets'
-import type { TagDetails } from '../types/types'
+import type { ProjectDescriptionData, TagDetails } from '../types/types'
 import type { ImageMetadata } from 'astro'
 import LinkButton from '@components/LinkButton.astro'
 import GithubIcon from '@components/icons/GithubIcon.astro'
@@ -10,7 +10,7 @@ import LinkIcon from '@components/icons/LinkIcon.astro'
 interface Props {
   title: string
   tags: TagDetails[]
-  description: string
+  description: ProjectDescriptionData
   imgFile: string
   links: {
     github?: string
@@ -58,9 +58,7 @@ const t = useTranslations(lang)
         ))
       }
     </ul>
-    <p class="text-secondary">
-      {description}
-    </p>
+    <p class="text-secondary" set:html={description[lang]} />
     <footer class="flex items-center gap-4">
       {
         links?.github && (

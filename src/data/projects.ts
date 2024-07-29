@@ -4,7 +4,10 @@ import type { ProjectDetails } from '@/types/types'
 export const projects: ProjectDetails[] = [
   {
     title: 'Job Ready',
-    description: '...',
+    description: {
+      es: 'Plataforma de simulación de entrevistas con ofertas reales, impulsada por <strong>InfoJobs</strong> y potenciada por <strong>IA</strong>. ¡Busca una oferta y enfréntate a la entrevista!',
+      en: 'Interview simulation platform with real offers, powered by <strong>InfoJobs</strong> and powered by <strong>AI</strong>. Search for an offer and face the interview!'
+    },
     tags: [TAGS.react!, TAGS.typescript!, TAGS.tailwind!],
     imgFile: 'jobReady.webp',
     links: {
@@ -13,7 +16,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Proyectos Solidarios',
-    description: '...',
+    description: {
+      es: 'Web de los proyectos solidarios del <strong>Instituto Nebrija de Formación Profesional</strong>. En ella se muestran todos los proyectos, con una sección de noticias y una newsletter.',
+      en: 'Web of the solidarity projects of the <strong>Instituto Nebrija de Formación Profesional</strong>. It shows all the projects, with a news section and a newsletter.'
+    },
     tags: [TAGS.astro!, TAGS.docker!],
     imgFile: 'proyectosSolidarios.webp',
     links: {
@@ -24,7 +30,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Pikalang',
-    description: '...',
+    description: {
+      es: 'Compilador de un nuevo lenguaje de programación diseñado para ser simple, fácil y efectivo. Está escrito en <strong>Go</strong> y su sintaxis se inspira en varios lenguajes.',
+      en: 'Compiler of a new programming language designed to be simple, easy and effective. It is written in <strong>Go</strong> and its syntax is inspired by several languages.'
+    },
     tags: [TAGS.golang!],
     imgFile: 'pikalang.webp',
     links: {
@@ -33,7 +42,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Wikat',
-    description: '...',
+    description: {
+      es: 'Catálogo de gatos en el que puedes buscar la raza de un gato y explorar todas sus características.',
+      en: "Cat catalog where you can search for a cat's breed and explore all its characteristics."
+    },
     tags: [
       TAGS.react!,
       TAGS.typescript!,
@@ -49,7 +61,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'DockerHook',
-    description: '...',
+    description: {
+      es: 'Herramienta que facilita la gestión de contenedores de Docker mediante el uso de <strong>WebHooks</strong>.',
+      en: 'Tool that facilitates the management of Docker containers through the use of <strong>WebHooks</strong>.'
+    },
     tags: [TAGS.golang!, TAGS.docker!],
     imgFile: 'dockerhook.webp',
     links: {
@@ -58,7 +73,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'DinamicJS',
-    description: '...',
+    description: {
+      es: 'Entorno de pruebas para <strong>JavaScript</strong> que ejecuta tu código y te muestra los resultados de forma instantánea, además de ofrecer muchas más funcionalidades.',
+      en: 'Playground for <strong>JavaScript</strong> that executes your code and shows you the results instantly, in addition to offering many more features.'
+    },
     tags: [TAGS.react!, TAGS.redux!],
     imgFile: 'dinamicjs.webp',
     links: {
@@ -68,7 +86,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'DinamicJS Desktop',
-    description: '...',
+    description: {
+      es: 'Entorno de pruebas para <strong>JavaScript</strong> que ejecuta tu código y te muestra los resultados de forma instantánea, además de ofrecer muchas más funcionalidades.',
+      en: 'Playground for <strong>JavaScript</strong> that executes your code and shows you the results instantly, in addition to offering many more features.'
+    },
     tags: [TAGS.react!, TAGS.redux!, TAGS.electron!],
     imgFile: 'dinamicjs.webp',
     links: {
@@ -77,7 +98,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Babel Plugin Auto Console Log',
-    description: '...',
+    description: {
+      es: 'Plugin de <strong>Babel</strong> que agrega automáticamente declaraciones <strong>console.log()</strong> al código JavaScript, facilitando la depuración del código.',
+      en: 'Plugin for <strong>Babel</strong> that automatically adds <strong>console.log()</strong> statements to JavaScript code, making code debugging easier.'
+    },
     tags: [TAGS.babel!, TAGS.npm!],
     imgFile: 'babelPluginAutoConsoleLog.webp',
     links: {
@@ -87,7 +111,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Photo Display',
-    description: '...',
+    description: {
+      es: 'Plataforma de galería de fotos que permite exhibir todas las imágenes cargadas a través de una URL.',
+      en: 'Photo gallery platform that allows you to display all uploaded images through a URL.'
+    },
     tags: [
       TAGS.react!,
       TAGS.redux!,
@@ -102,7 +129,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Discord Bot',
-    description: '...',
+    description: {
+      es: 'Bot multipropósito para Discord. Ofrece funciones de música, entretenimiento y administración, incluyendo encuestas, sistema de tickets y soporte para Sourcebin.',
+      en: 'Multipurpose bot for Discord. It offers music, entertainment and administration functions, including polls, ticketing system and Sourcebin support.'
+    },
     tags: [TAGS.nodejs!, TAGS.docker!, TAGS.mongodb!, TAGS.redis!],
     imgFile: 'discordBot.webp',
     links: {
@@ -111,7 +141,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Cloud Toolbox',
-    description: '...',
+    description: {
+      es: 'Plataforma que agrupa herramientas para eliminar fondos, etiquetar imágenes, capturar páginas web y verificar la seguridad de documentos.',
+      en: 'Platform that brings together tools for removing backgrounds, tagging images, capturing web pages and verifying document security.'
+    },
     tags: [TAGS.react!, TAGS.typescript!, TAGS.nestjs!],
     imgFile: 'cloudToolbox.webp',
     links: {
@@ -120,7 +153,10 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Image Uploader',
-    description: '...',
+    description: {
+      es: 'Plataforma para cargar imágenes que genera un enlace para acceder a ellas.',
+      en: 'Platform for uploading images that generates a link to access them.'
+    },
     tags: [TAGS.nestjs!, TAGS.mongodb!, TAGS.docker!],
     imgFile: 'imageUploader.webp',
     links: {

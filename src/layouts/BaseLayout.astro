@@ -9,12 +9,13 @@ const t = useTranslations(lang)
 ---
 
 <!doctype html>
-<html class="dark">
+<html class="dark" lang={lang}>
   <CommonHead />
   <body class="bg-primary max-w-4xl w-11/12 mx-auto">
     <slot />
     <BackToTop />
-    <footer class="flex items-center mt-16 mb-10 justify-between">
+    <footer
+      class="flex flex-wrap items-center mt-16 mb-10 justify-center sm:justify-between flex-col sm:flex-row gap-4 sm:gap-0">
       <span class="text-secondary text-sm">Hugo Boyano Escoz</span>
       <ul class="flex items-center gap-6 text-sm text-secondary font-bold">
         <li>

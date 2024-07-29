@@ -8,6 +8,9 @@ import { cannonicalURL } from './src/constants/seo'
 // https://astro.build/config
 export default defineConfig({
   site: cannonicalURL,
+  devToolbar: {
+    enabled: false
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false

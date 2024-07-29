@@ -18,8 +18,7 @@ interface Props {
 }
 
 const { title = t('page.title') } = Astro.props
-
-const ogUrlImg = 'https://hgo.one/images/og.png'
+const ogImage = cannonicalURL + '/images/og.png'
 ---
 
 <Head>
@@ -30,18 +29,22 @@ const ogUrlImg = 'https://hgo.one/images/og.png'
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="canonical" href={cannonicalURL} />
-  <meta name="keywords" content="" />
+  <meta
+    name="keywords"
+    content="hugo, hugo boyano, hugo boyano escoz, developer, fullstack, software developer, fullstack developer, waxer59, waxer, hugo developer"
+  />
 
   <meta name="description" content={t('meta.description')} />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@Waxer59" />
   <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={t('meta.description')} />
-  <meta name="twitter:image" content={ogUrlImg} />
+  <meta name="twitter:description" content={t('og.description')} />
+  <meta name="twitter:image" content={ogImage} />
 
-  <meta property="og:image" content={ogUrlImg} />
+  <meta property="og:image" content={ogImage} />
   <meta property="og:title" content={title} />
-  <meta property="og:description" content={t('meta.description')} />
+  <meta property="og:description" content={t('og.description')} />
   <meta property="og:url" content={Astro.url} />
   <meta property="og:site_name" content={title} />
   <meta property="og:type" content="website" />

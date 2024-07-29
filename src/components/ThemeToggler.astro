@@ -15,10 +15,6 @@ import SunIcon from '@components/icons/SunIcon.astro'
 <script>
   const LOCAL_STORAGE_THEME_KEY = 'theme'
   const html = document.querySelector('html') as HTMLElement
-  const selectedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
-  const systemSettingDark = window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches
 
   enum THEMES {
     dark = 'dark',
@@ -39,18 +35,11 @@ import SunIcon from '@components/icons/SunIcon.astro'
     const currentTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
     const isDarkTheme = currentTheme === THEMES.dark
 
-    if (isDarkTheme) {
+    if (isDarkTheme || !currentTheme) {
       setThemePreference(THEMES.light)
     } else {
       setThemePreference(THEMES.dark)
     }
-  }
-
-  // Set up the select theme
-  if (selectedTheme === THEMES.dark || (systemSettingDark && !selectedTheme)) {
-    setThemePreference(THEMES.dark)
-  } else {
-    setThemePreference(THEMES.light)
   }
 
   document.addEventListener('astro:after-swap', () => {

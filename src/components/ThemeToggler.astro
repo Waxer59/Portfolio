@@ -18,6 +18,7 @@ const t = useTranslations(lang)
 
 <script>
   const LOCAL_STORAGE_THEME_KEY = 'theme'
+  const themeValue = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
   const html = document.querySelector('html') as HTMLElement
 
   enum THEMES {
@@ -59,10 +60,13 @@ const t = useTranslations(lang)
     ) as HTMLButtonElement
 
     btnThemeToggler.addEventListener('click', () => {
-      // @ts-expect-error View transitions API is not embedded in Ts definition yet
       if (!document.startViewTransition) switchTheme()
-      // @ts-expect-error View transitions API is not embedded in Ts definition yet
       document.startViewTransition(switchTheme)
     })
   })
+
+  if (themeValue === THEMES.light) {
+    if (!document.startViewTransition) setThemePreference(THEMES.light)
+    document.startViewTransition(() => setThemePreference(THEMES.light))
+  }
 </script>

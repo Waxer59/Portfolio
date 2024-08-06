@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '@/i18n/utils'
-import ArrowUpRightIcon from './icons/ArrowUp.astro'
+import ArrowUpIcon from './icons/ArrowUpIcon.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -10,7 +10,7 @@ const t = useTranslations(lang)
   class="fixed right-2 bottom-16 lg:bottom-6 lg:right-6 p-2 transition-opacity rounded-md border-secondary border-2 group hover:scale-105 hover:border-accent opacity-0"
   id="btn-back-to-top"
   aria-label={t('aria.backToTop')}>
-  <ArrowUpRightIcon
+  <ArrowUpIcon
     class="text-secondary w-5 h-5 lg:w-8 lg:h-8 rotate-45 group-hover:rotate-0 transition-transform stroke-2 group-hover:text-accent motion-safe:transition"
   />
 </button>

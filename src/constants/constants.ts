@@ -15,6 +15,7 @@ import PostgresqlIcon from '@components/icons/PostgresqlIcon.astro'
 import MongodbIcon from '@components/icons/MongodbIcon.astro'
 import NodejsIcon from '@/components/icons/NodejsIcon.astro'
 import NpmIcon from '@/components/icons/NpmIcon.astro'
+import OpenAiIcon from '@/components/icons/OpenAiIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {
@@ -96,5 +97,10 @@ export const TAGS: TagKeyDetails = {
     name: 'npm',
     class: 'bg-red-950 text-white',
     icon: NpmIcon
+  },
+  openai: {
+    name: 'OpenAI',
+    class: 'bg-black text-white',
+    icon: OpenAiIcon
   }
 }

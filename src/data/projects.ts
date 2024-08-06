@@ -3,12 +3,24 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Asobu',
+    description: {
+      es: 'Innovador asistente de voz que explora la versatilidad de la IA, integrando música, navegación, traducción y reconocimiento de imágenes en una plataforma única.',
+      en: 'Innovative voice assistant that explores the versatility of AI, integrating music, navigation, translation and image recognition in a single platform.'
+    },
+    tags: [TAGS.nextjs!, TAGS.typescript!, TAGS.tailwind!, TAGS.openai!],
+    imgFile: 'asobu.webp',
+    links: {
+      github: 'https://github.com/Waxer59/Asobu'
+    }
+  },
+  {
     title: 'Job Ready',
     description: {
       es: 'Plataforma de simulación de entrevistas con ofertas reales, impulsada por <strong>InfoJobs</strong> y potenciada por <strong>IA</strong>. ¡Busca una oferta y enfréntate a la entrevista!',
       en: 'Interview simulation platform with real offers, powered by <strong>InfoJobs</strong> and powered by <strong>AI</strong>. Search for an offer and face the interview!'
     },
-    tags: [TAGS.react!, TAGS.typescript!, TAGS.tailwind!],
+    tags: [TAGS.react!, TAGS.typescript!, TAGS.tailwind!, TAGS.openai!],
     imgFile: 'jobReady.webp',
     links: {
       github: 'https://github.com/Waxer59/JobReady'
@@ -77,7 +89,7 @@ export const projects: ProjectDetails[] = [
       es: 'Entorno de pruebas para <strong>JavaScript</strong> que ejecuta tu código y te muestra los resultados de forma instantánea, además de ofrecer muchas más funcionalidades.',
       en: 'Playground for <strong>JavaScript</strong> that executes your code and shows you the results instantly, in addition to offering many more features.'
     },
-    tags: [TAGS.react!, TAGS.redux!],
+    tags: [TAGS.react!, TAGS.redux!, TAGS.openai!],
     imgFile: 'dinamicjs.webp',
     links: {
       github: 'https://github.com/Waxer59/DinamicJs',
@@ -90,7 +102,7 @@ export const projects: ProjectDetails[] = [
       es: 'Entorno de pruebas para <strong>JavaScript</strong> que ejecuta tu código y te muestra los resultados de forma instantánea, además de ofrecer muchas más funcionalidades.',
       en: 'Playground for <strong>JavaScript</strong> that executes your code and shows you the results instantly, in addition to offering many more features.'
     },
-    tags: [TAGS.react!, TAGS.redux!, TAGS.electron!],
+    tags: [TAGS.react!, TAGS.redux!, TAGS.electron!, TAGS.openai!],
     imgFile: 'dinamicjs.webp',
     links: {
       github: 'https://github.com/Waxer59/DinamicJs-Desktop'

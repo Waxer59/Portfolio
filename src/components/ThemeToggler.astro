@@ -60,13 +60,17 @@ const t = useTranslations(lang)
     ) as HTMLButtonElement
 
     btnThemeToggler.addEventListener('click', () => {
+      // @ts-expect-error View transitions API is not embedded in Ts definition yet
       if (!document.startViewTransition) switchTheme()
+      // @ts-expect-error View transitions API is not embedded in Ts definition yet
       document.startViewTransition(switchTheme)
     })
   })
 
   if (themeValue === THEMES.light) {
+    // @ts-expect-error View transitions API is not embedded in Ts definition yet
     if (!document.startViewTransition) setThemePreference(THEMES.light)
+    // @ts-expect-error View transitions API is not embedded in Ts definition yet
     document.startViewTransition(() => setThemePreference(THEMES.light))
   }
 </script>

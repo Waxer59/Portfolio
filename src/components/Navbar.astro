@@ -73,12 +73,16 @@ const t = useTranslations(lang)
   })
 
   btnMenu.addEventListener('click', () => {
+    // @ts-expect-error View transitions API is not embedded in Ts definition yet
     if (!document.startViewTransition) showMenu()
+    // @ts-expect-error View transitions API is not embedded in Ts definition yet
     document.startViewTransition(showMenu)
   })
 
   btnMenuClose.addEventListener('click', () => {
+    // @ts-expect-error View transitions API is not embedded in Ts definition yet
     if (!document.startViewTransition) hideMenu()
+    // @ts-expect-error View transitions API is not embedded in Ts definition yet
     document.startViewTransition(hideMenu)
   })
 </script>

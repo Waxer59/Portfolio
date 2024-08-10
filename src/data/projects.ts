@@ -3,6 +3,25 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Hear Me Out',
+    description: {
+      es: 'Plataforma de mensajería en tiempo real con soporte para videollamadas y grupos.',
+      en: 'Real-time messaging platform with support for video calls and groups.'
+    },
+    tags: [
+      TAGS.react!,
+      TAGS.typescript!,
+      TAGS.tailwind!,
+      TAGS.nestjs!,
+      TAGS.mongodb!,
+      TAGS.redis!
+    ],
+    imgFile: 'hearmeout.webp',
+    links: {
+      github: 'https://github.com/Waxer59/HearMeOut'
+    }
+  },
+  {
     title: 'Asobu',
     description: {
       es: 'Innovador asistente de voz que explora la versatilidad de la IA, integrando música, navegación, traducción y reconocimiento de imágenes en una plataforma única.',

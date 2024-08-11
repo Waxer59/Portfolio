@@ -5,6 +5,8 @@ import { ViewTransitions } from 'astro:transitions'
 import { cannonicalURL } from '@/constants/seo'
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
 
+const isProd = import.meta.env.PROD
+
 const currentLang = getLangFromUrl(Astro.url)
 const t = useTranslations(currentLang)
 
@@ -36,12 +38,16 @@ const ogImage = cannonicalURL + '/images/og.png'
 
   <meta name="description" content={t('meta.description')} />
 
-  <!-- Analytics -->
-  <script
-    is:inline
-    defer
-    src="https://analytics.hgo.one/script.js"
-    data-website-id="ffde40d4-edb3-4cab-a0f1-f8628b7626f0"></script>
+  {
+    isProd && (
+      <script
+        is:inline
+        defer
+        src="https://analytics.hgo.one/script.js"
+        data-website-id="ffde40d4-edb3-4cab-a0f1-f8628b7626f0"
+      />
+    )
+  }
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@Waxer59" />

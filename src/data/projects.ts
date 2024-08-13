@@ -3,6 +3,25 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Just Ask',
+    description: {
+      es: 'Plataforma avanzada para la simulación de entrevistas laborales.',
+      en: 'Advanced platform for simulating job interviews.'
+    },
+    tags: [
+      TAGS.astro!,
+      TAGS.react!,
+      TAGS.typescript!,
+      TAGS.tailwind!,
+      TAGS.gemini!
+    ],
+    imgFile: 'justAsk.webp',
+    links: {
+      github: 'https://github.com/Waxer59/JustAsk',
+      preview: 'https://justask.hgo.one'
+    }
+  },
+  {
     title: 'Hear Me Out',
     description: {
       es: 'Plataforma de mensajería en tiempo real con soporte para videollamadas y grupos.',

@@ -27,12 +27,12 @@ const t = useTranslations(lang)
   }
 
   const setThemePreference = (theme: THEMES) => {
-    if (theme === THEMES.dark) {
-      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, THEMES.dark)
-      html.classList.add(THEMES.dark)
-    } else {
+    if (theme === THEMES.light) {
       localStorage.setItem(LOCAL_STORAGE_THEME_KEY, THEMES.light)
       html.classList.remove(THEMES.dark)
+    } else if (theme === THEMES.dark) {
+      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, THEMES.dark)
+      html.classList.add(THEMES.dark)
     }
   }
 

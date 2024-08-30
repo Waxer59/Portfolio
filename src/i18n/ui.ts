@@ -29,7 +29,9 @@ export const ui = {
     'aria.backToTop': 'Volver al inicio',
     'aria.openMenu': 'Abrir menú',
     'aria.closeMenu': 'Cerrar menú',
-    'aria.switchTheme': 'Cambiar tema'
+    'aria.switchTheme': 'Cambiar tema',
+    seeMore: 'Ver más',
+    seeLess: 'Ver menos'
   },
   en: {
     'page.title': "Hugo's portfolio - Software Developer",
@@ -53,6 +55,8 @@ export const ui = {
     'aria.backToTop': 'Back to top',
     'aria.openMenu': 'Open menu',
     'aria.closeMenu': 'Close menu',
-    'aria.switchTheme': 'Switch theme'
+    'aria.switchTheme': 'Switch theme',
+    seeMore: 'See more',
+    seeLess: 'See less'
   }
 } as const

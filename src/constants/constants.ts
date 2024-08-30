@@ -13,10 +13,10 @@ import ReduxIcon from '@components/icons/ReduxIcon.astro'
 import BabelIcon from '@components/icons/BabelIcon.astro'
 import PostgresqlIcon from '@components/icons/PostgresqlIcon.astro'
 import MongodbIcon from '@components/icons/MongodbIcon.astro'
-import NodejsIcon from '@/components/icons/NodejsIcon.astro'
-import NpmIcon from '@/components/icons/NpmIcon.astro'
-import OpenAiIcon from '@/components/icons/OpenAiIcon.astro'
-import GeminiIcon from '@/components/icons/GeminiIcon.astro'
+import NodejsIcon from '@components/icons/NodejsIcon.astro'
+import NpmIcon from '@components/icons/NpmIcon.astro'
+import OpenAiIcon from '@components/icons/OpenAiIcon.astro'
+import GeminiIcon from '@components/icons/GeminiIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {

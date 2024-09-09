@@ -34,6 +34,7 @@ import GithubLogoIcon from '@components/icons/GithubLogoIcon.astro'
 import JestIcon from '@components/icons/JestIcon.astro'
 import Tooltip from '@components/Tooltip.astro'
 import AstroDarkIcon from '@components/icons/AstroDarkIcon.astro'
+import AngularIcon from './icons/AngularIcon.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -120,6 +121,11 @@ const t = useTranslations(lang)
           <Tooltip text="AstroJS">
             <AstroIcon class="size-10 hidden dark:block" />
             <AstroDarkIcon class="size-10 block dark:hidden" />
+          </Tooltip>
+        </li>
+        <li>
+          <Tooltip text="Angular">
+            <AngularIcon class="size-10" />
           </Tooltip>
         </li>
         <li>

@@ -1,5 +1,6 @@
 import AstroDarkIcon from '@/components/icons/AstroDarkIcon.astro'
 import AstroLightIcon from '@/components/icons/AstroLightIcon.astro'
+import AwsIcon from '@/components/icons/AwsIcon.astro'
 import BookIcon from '@/components/icons/BookIcon.astro'
 import CloudIcon from '@/components/icons/CloudIcon.astro'
 import CssIcon from '@/components/icons/CssIcon.astro'
@@ -157,6 +158,10 @@ const devops: SkillsetDetails = {
     {
       name: 'Docker',
       icon: DockerIcon
+    },
+    {
+      name: 'AWS',
+      icon: AwsIcon
     },
     {
       name: 'Git',

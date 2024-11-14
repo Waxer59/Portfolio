@@ -5,8 +5,8 @@ export const projects: ProjectDetails[] = [
   {
     title: 'Smll',
     description: {
-      es: 'Acortador de enlaces diseñado para compartir enlaces cortos de manera sencilla, con métricas, seguridad y mucho más. ¡Todo en un solo lugar!',
-      en: 'Link shortener designed to share short links easily, with metrics, security and much more, all in one place!'
+      es: 'Acortador diseñado para compartir enlaces de forma sencilla, con métricas, seguridad y más. ¡Todo en un solo lugar!',
+      en: 'Link shortener designed for easy link sharing, metrics, security and more, all in one place!'
     },
     tags: [
       TAGS.nextjs!,

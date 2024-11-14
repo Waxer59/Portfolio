@@ -7,7 +7,7 @@ import GoIcon from '@components/icons/GoIcon.astro'
 import NestjsIcon from '@components/icons/NestjsIcon.astro'
 import RedisIcon from '@components/icons/RedisIcon.astro'
 import DockerIcon from '@components/icons/DockerIcon.astro'
-import AstroIcon from '@components/icons/AstroIcon.astro'
+import AstroLightIcon from '@components/icons/AstroLightIcon.astro'
 import ElectronIcon from '@components/icons/ElectronIcon.astro'
 import ReduxIcon from '@components/icons/ReduxIcon.astro'
 import BabelIcon from '@components/icons/BabelIcon.astro'
@@ -63,7 +63,7 @@ export const TAGS: TagKeyDetails = {
   astro: {
     name: 'AstroJS',
     class: 'bg-[#17191e] text-white',
-    icon: AstroIcon
+    icon: AstroLightIcon
   },
   electron: {
     name: 'Electron',

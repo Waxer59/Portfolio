@@ -3,6 +3,25 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Smll',
+    description: {
+      es: 'Acortador de enlaces diseñado para compartir enlaces cortos de manera sencilla, con métricas, seguridad y mucho más. ¡Todo en un solo lugar!',
+      en: 'Link shortener designed to share short links easily, with metrics, security and much more, all in one place!'
+    },
+    tags: [
+      TAGS.nextjs!,
+      TAGS.typescript!,
+      TAGS.tailwind!,
+      TAGS.appwrite!,
+      TAGS.vitest!
+    ],
+    imgFile: 'smll.webp',
+    links: {
+      github: 'https://github.com/Waxer59/Smll',
+      preview: 'https://smll.app'
+    }
+  },
+  {
     title: 'Just Ask',
     description: {
       es: 'Plataforma avanzada para la simulación de entrevistas laborales.',

@@ -17,6 +17,8 @@ import NodejsIcon from '@components/icons/NodejsIcon.astro'
 import NpmIcon from '@components/icons/NpmIcon.astro'
 import OpenAiIcon from '@components/icons/OpenAiIcon.astro'
 import GeminiIcon from '@components/icons/GeminiIcon.astro'
+import AppWriteIcon from '@/components/icons/AppWriteIcon.astro'
+import VitestIcon from '@/components/icons/VitestIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {
@@ -71,7 +73,7 @@ export const TAGS: TagKeyDetails = {
   },
   redux: {
     name: 'Redux',
-    class: 'bg-purple-700 text-white',
+    class: 'bg-purple-900 text-white',
     icon: ReduxIcon
   },
   babel: {
@@ -101,12 +103,22 @@ export const TAGS: TagKeyDetails = {
   },
   openai: {
     name: 'OpenAI',
-    class: 'bg-black text-white',
+    class: 'bg-zinc-900 text-white',
     icon: OpenAiIcon
   },
   gemini: {
     name: 'Gemini',
-    class: 'bg-black text-white',
+    class: 'bg-indigo-900 text-white',
     icon: GeminiIcon
+  },
+  appwrite: {
+    name: 'Appwrite',
+    class: 'bg-rose-700 text-white [&>svg]:rounded-full',
+    icon: AppWriteIcon
+  },
+  vitest: {
+    name: 'Vitest',
+    class: 'bg-green-900 text-white',
+    icon: VitestIcon
   }
 }

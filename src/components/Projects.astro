@@ -38,19 +38,27 @@ const t = useTranslations(lang)
 </style>
 
 <script>
-  const projects = document.querySelector('#projects-list') as HTMLUListElement
-  const btnSeeMore = document.querySelector('#btn-seeMore') as HTMLButtonElement
-  const btnSeeLess = document.querySelector('#btn-seeLess') as HTMLButtonElement
+  document.addEventListener('astro:page-load', () => {
+    const projects = document.querySelector(
+      '#projects-list'
+    ) as HTMLUListElement
+    const btnSeeMore = document.querySelector(
+      '#btn-seeMore'
+    ) as HTMLButtonElement
+    const btnSeeLess = document.querySelector(
+      '#btn-seeLess'
+    ) as HTMLButtonElement
 
-  const toggleProjectsList = () => {
-    btnSeeMore.classList.toggle('hidden')
+    const toggleProjectsList = () => {
+      btnSeeMore.classList.toggle('hidden')
 
-    btnSeeLess.classList.toggle('hidden')
+      btnSeeLess.classList.toggle('hidden')
 
-    projects.classList.toggle('collapse-projects')
-    projects.classList.toggle('show-all-projects')
-  }
+      projects.classList.toggle('collapse-projects')
+      projects.classList.toggle('show-all-projects')
+    }
 
-  btnSeeMore.addEventListener('click', toggleProjectsList)
-  btnSeeLess.addEventListener('click', toggleProjectsList)
+    btnSeeMore.addEventListener('click', toggleProjectsList)
+    btnSeeLess.addEventListener('click', toggleProjectsList)
+  })
 </script>

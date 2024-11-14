@@ -24,8 +24,8 @@ export const projects: ProjectDetails[] = [
   {
     title: 'Hear Me Out',
     description: {
-      es: 'Plataforma de mensajería en tiempo real con soporte para videollamadas y grupos.',
-      en: 'Real-time messaging platform with support for video calls and groups.'
+      es: 'Plataforma de mensajería en tiempo real con soporte para llamadas y grupos.',
+      en: 'Real-time messaging platform with support for calls and groups.'
     },
     tags: [
       TAGS.react!,

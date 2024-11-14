@@ -1,40 +1,8 @@
 ---
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
-import BookIcon from '@components/icons/BookIcon.astro'
 import ToolsIcon from '@components/icons/ToolsIcon.astro'
-import MonitorIcon from '@components/icons/MonitorIcon.astro'
-import ServerIcon from '@components/icons/ServerIcon.astro'
-import CloudIcon from '@components/icons/CloudIcon.astro'
-import JavascriptIcon from '@components/icons/JavascriptIcon.astro'
-import TypeScriptIcon from '@components/icons/TypeScriptIcon.astro'
-import JavaIcon from '@components/icons/JavaIcon.astro'
-import GoIcon from '@components/icons/GoIcon.astro'
-import HtmlIcon from '@components/icons/HtmlIcon.astro'
-import CssIcon from '@components/icons/CssIcon.astro'
-import SassIcon from '@components/icons/SassIcon.astro'
-import ReactIcon from '@components/icons/ReactIcon.astro'
-import ReduxIcon from '@components/icons/ReduxIcon.astro'
-import TailwindIcon from '@components/icons/TailwindIcon.astro'
-import ExpressIcon from '@components/icons/ExpressIcon.astro'
-import NextjsIcon from '@components/icons/NextjsIcon.astro'
-import NodejsIcon from '@components/icons/NodejsIcon.astro'
-import AstroIcon from '@components/icons/AstroIcon.astro'
-import NestjsIcon from '@components/icons/NestjsIcon.astro'
-import MongodbIcon from '@components/icons/MongodbIcon.astro'
-import PostgresqlIcon from '@components/icons/PostgresqlIcon.astro'
-import MysqlIcon from '@components/icons/MysqlIcon.astro'
-import ElectronIcon from '@components/icons/ElectronIcon.astro'
-import RedisIcon from '@components/icons/RedisIcon.astro'
-import FirebaseIcon from '@components/icons/FirebaseIcon.astro'
-import SocketioIcon from '@components/icons/SocketioIcon.astro'
-import GraphqlIcon from '@components/icons/GraphqlIcon.astro'
-import DockerIcon from '@components/icons/DockerIcon.astro'
-import GitIcon from '@components/icons/GitIcon.astro'
-import GithubLogoIcon from '@components/icons/GithubLogoIcon.astro'
-import JestIcon from '@components/icons/JestIcon.astro'
 import Tooltip from '@components/Tooltip.astro'
-import AstroDarkIcon from '@components/icons/AstroDarkIcon.astro'
-import AngularIcon from './icons/AngularIcon.astro'
+import { skillset } from '@/data/skillset'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -48,178 +16,30 @@ const t = useTranslations(lang)
     {t('nav.skillset')}
   </h2>
   <ul class="flex flex-col gap-8 mt-6">
-    <li>
-      <h3
-        class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
-        <BookIcon /> Languages
-      </h3>
-      <ul class="flex flex-wrap gap-3 mt-4">
+    {
+      skillset.map((skillset) => (
         <li>
-          <Tooltip text="JavaScript">
-            <JavascriptIcon class="size-10 rounded" />
-          </Tooltip>
+          <h3 class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
+            <skillset.icon /> {skillset.name}
+          </h3>
+          <ul class="flex flex-wrap gap-3 mt-4">
+            {skillset.items.map((item) => (
+              <li>
+                <Tooltip text={item.name}>
+                  {item.darkIcon && (
+                    <item.darkIcon
+                      class={`size-10 ${item.className} hidden dark:block`}
+                    />
+                  )}
+                  <item.icon
+                    class={`size-10 ${item.className} ${item.darkIcon ? 'dark:hidden' : ''}`}
+                  />
+                </Tooltip>
+              </li>
+            ))}
+          </ul>
         </li>
-        <li>
-          <Tooltip text="TypeScript">
-            <TypeScriptIcon class="size-10 rounded" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Java">
-            <JavaIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Golang">
-            <GoIcon class="size-10 fill-[#00acd7]" />
-          </Tooltip>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h3
-        class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
-        <MonitorIcon /> Frontend
-      </h3>
-      <ul class="flex flex-wrap gap-3 mt-4">
-        <li>
-          <Tooltip text="HTML">
-            <HtmlIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="CSS">
-            <CssIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Sass">
-            <SassIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="React">
-            <ReactIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Next.js">
-            <NextjsIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Redux">
-            <ReduxIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Electron">
-            <ElectronIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="AstroJS">
-            <AstroIcon class="size-10 hidden dark:block" />
-            <AstroDarkIcon class="size-10 block dark:hidden" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Angular">
-            <AngularIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Tailwind">
-            <TailwindIcon class="size-10" />
-          </Tooltip>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h3
-        class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
-        <ServerIcon /> Backend
-      </h3>
-      <ul class="flex flex-wrap gap-3 mt-4">
-        <li>
-          <Tooltip text="NodeJS">
-            <NodejsIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="ExpressJS">
-            <ExpressIcon class="size-10 invert dark:invert-0" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="NestJS">
-            <NestjsIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="MongoDB">
-            <MongodbIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="PostgreSQL">
-            <PostgresqlIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="MySQL">
-            <MysqlIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Redis">
-            <RedisIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Firebase">
-            <FirebaseIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Socket.io">
-            <SocketioIcon class="size-10 fill-white invert dark:invert-0" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="GraphQL">
-            <GraphqlIcon class="size-10" />
-          </Tooltip>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h3
-        class="text-tertiary text-xl font-bold uppercase tracking-wider flex items-center gap-4">
-        <CloudIcon /> Devops
-      </h3>
-      <ul class="flex flex-wrap gap-3 mt-4">
-        <li>
-          <Tooltip text="Docker">
-            <DockerIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Git">
-            <GitIcon class="size-10" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Github">
-            <GithubLogoIcon class="size-10 fill-white invert dark:invert-0" />
-          </Tooltip>
-        </li>
-        <li>
-          <Tooltip text="Jest">
-            <JestIcon class="size-10" />
-          </Tooltip>
-        </li>
-      </ul>
-    </li>
+      ))
+    }
   </ul>
 </section>

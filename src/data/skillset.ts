@@ -40,6 +40,7 @@ const languages: SkillsetDetails = {
   items: [
     {
       name: 'JavaScript',
+      className: 'rounded',
       icon: JavascriptIcon
     },
     {

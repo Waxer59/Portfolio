@@ -83,20 +83,6 @@ export const projects: ProjectDetails[] = [
       github: 'https://github.com/Waxer59/JobReady'
     }
   },
-  // {
-  //   title: 'Proyectos Solidarios',
-  //   description: {
-  //     es: 'Web de los proyectos solidarios del <strong>Instituto Nebrija de Formación Profesional</strong>. En ella se muestran todos los proyectos, con una sección de noticias y una newsletter.',
-  //     en: 'Web of the solidarity projects of the <strong>Instituto Nebrija de Formación Profesional</strong>. It shows all the projects, with a news section and a newsletter.'
-  //   },
-  //   tags: [TAGS.astro!, TAGS.docker!],
-  //   imgFile: 'proyectosSolidarios.webp',
-  //   links: {
-  //     github:
-  //       'https://github.com/Proyectos-solidarios-nebrija/catalogo-solidarios',
-  //     preview: 'https://solidarios.nebrijanos.com'
-  //   }
-  // },
   {
     title: 'Pikalang',
     description: {

@@ -1,3 +1,4 @@
+import AngularIcon from '@/components/icons/AngularIcon.astro'
 import AstroDarkIcon from '@/components/icons/AstroDarkIcon.astro'
 import AstroLightIcon from '@/components/icons/AstroLightIcon.astro'
 import AwsIcon from '@/components/icons/AwsIcon.astro'
@@ -96,6 +97,10 @@ const frontend: SkillsetDetails = {
       name: 'AstroJS',
       icon: AstroDarkIcon,
       darkIcon: AstroLightIcon
+    },
+    {
+      name: 'Angular',
+      icon: AngularIcon
     },
     {
       name: 'Tailwind',

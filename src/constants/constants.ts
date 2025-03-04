@@ -17,8 +17,8 @@ import NodejsIcon from '@components/icons/NodejsIcon.astro'
 import NpmIcon from '@components/icons/NpmIcon.astro'
 import OpenAiIcon from '@components/icons/OpenAiIcon.astro'
 import GeminiIcon from '@components/icons/GeminiIcon.astro'
-import Appwrite from '@/components/icons/AppwriteIcon.astro'
 import VitestIcon from '@/components/icons/VitestIcon.astro'
+import AppwriteIcon from '@/components/icons/AppwriteIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {
@@ -114,7 +114,7 @@ export const TAGS: TagKeyDetails = {
   appwrite: {
     name: 'Appwrite',
     class: 'bg-rose-700 text-white [&>svg]:rounded-full',
-    icon: Appwrite
+    icon: AppwriteIcon
   },
   vitest: {
     name: 'Vitest',

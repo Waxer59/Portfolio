@@ -17,7 +17,7 @@ import NodejsIcon from '@components/icons/NodejsIcon.astro'
 import NpmIcon from '@components/icons/NpmIcon.astro'
 import OpenAiIcon from '@components/icons/OpenAiIcon.astro'
 import GeminiIcon from '@components/icons/GeminiIcon.astro'
-import AppWriteIcon from '@/components/icons/AppWriteIcon.astro'
+import Appwrite from '@/components/icons/AppwriteIcon.astro'
 import VitestIcon from '@/components/icons/VitestIcon.astro'
 
 export const TAGS: TagKeyDetails = {
@@ -114,7 +114,7 @@ export const TAGS: TagKeyDetails = {
   appwrite: {
     name: 'Appwrite',
     class: 'bg-rose-700 text-white [&>svg]:rounded-full',
-    icon: AppWriteIcon
+    icon: Appwrite
   },
   vitest: {
     name: 'Vitest',

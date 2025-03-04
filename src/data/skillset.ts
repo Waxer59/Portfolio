@@ -29,6 +29,7 @@ import ReduxIcon from '@/components/icons/ReduxIcon.astro'
 import SassIcon from '@/components/icons/SassIcon.astro'
 import ServerIcon from '@/components/icons/ServerIcon.astro'
 import SocketioIcon from '@/components/icons/SocketioIcon.astro'
+import SpringIcon from '@/components/icons/SpringIcon.astro'
 import TailwindIcon from '@/components/icons/TailwindIcon.astro'
 import TypeScriptIcon from '@/components/icons/TypeScriptIcon.astro'
 import VitestIcon from '@/components/icons/VitestIcon.astro'
@@ -119,6 +120,10 @@ const backend: SkillsetDetails = {
     {
       name: 'NestJS',
       icon: NestjsIcon
+    },
+    {
+      name: 'Spring',
+      icon: SpringIcon
     },
     {
       name: 'MongoDB',

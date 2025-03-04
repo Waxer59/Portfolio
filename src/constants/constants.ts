@@ -18,7 +18,7 @@ import NpmIcon from '@components/icons/NpmIcon.astro'
 import OpenAiIcon from '@components/icons/OpenAiIcon.astro'
 import GeminiIcon from '@components/icons/GeminiIcon.astro'
 import VitestIcon from '@/components/icons/VitestIcon.astro'
-import AppwriteIcon from '@/components/icons/AppwriteIcon.astro'
+import AppwriteIcon from '@/components/icons/AppWriteIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {

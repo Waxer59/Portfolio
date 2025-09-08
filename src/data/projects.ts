@@ -87,7 +87,8 @@ export const projects: ProjectDetails[] = [
     tags: [TAGS.nextjs!, TAGS.typescript!, TAGS.tailwind!, TAGS.openai!],
     imgFile: 'asobu.webp',
     links: {
-      github: 'https://github.com/Waxer59/Asobu'
+      github: 'https://github.com/Waxer59/Asobu',
+      preview: "https://asobu.hgo.one"
     }
   },
   {

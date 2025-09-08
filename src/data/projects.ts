@@ -13,7 +13,7 @@ export const projects: ProjectDetails[] = [
       TAGS.typescript!,
       TAGS.tailwind!,
       TAGS.golang!,
-      TAGS.livekit!
+      TAGS.mux!
     ],
     imgFile: 'watchme.webp',
     links: {
@@ -43,8 +43,8 @@ export const projects: ProjectDetails[] = [
   {
     title: 'Just Ask',
     description: {
-      es: 'Plataforma avanzada para la simulación de entrevistas laborales.',
-      en: 'Advanced platform for simulating job interviews.'
+      es: 'Plataforma avanzada para la simulación de entrevistas laborales potenciadas por IA.',
+      en: 'Advanced platform for simulating job interviews powered by AI.'
     },
     tags: [
       TAGS.astro!,

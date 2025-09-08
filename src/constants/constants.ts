@@ -19,7 +19,7 @@ import OpenAiIcon from '@components/icons/OpenAiIcon.astro'
 import GeminiIcon from '@components/icons/GeminiIcon.astro'
 import VitestIcon from '@/components/icons/VitestIcon.astro'
 import AppwriteIcon from '@/components/icons/AppWriteIcon.astro'
-import LivekitIcon from '@/components/icons/LivekitIcon.astro'
+import MuxIcon from '@/components/icons/MuxIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {
@@ -122,9 +122,9 @@ export const TAGS: TagKeyDetails = {
     class: 'bg-green-900 text-white',
     icon: VitestIcon
   },
-  livekit: {
-    name: 'LiveKit',
-    class: 'bg-black text-white',
-    icon: LivekitIcon
+  mux: {
+    name: 'Mux',
+    class: 'bg-zinc-600 text-white',
+    icon: MuxIcon
   }
 }

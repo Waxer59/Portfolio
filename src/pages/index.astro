@@ -5,6 +5,7 @@ import Projects from '@components/Projects.astro'
 import Skillset from '@components/Skillset.astro'
 import AboutMe from '@components/AboutMe.astro'
 import Navbar from '@components/Navbar.astro'
+import Experience from '@/components/Experience.astro'
 ---
 
 <BaseLayout>
@@ -12,6 +13,7 @@ import Navbar from '@components/Navbar.astro'
   <main class="mt-36">
     <Hero />
     <div class="mt-36 flex flex-col gap-24">
+      <Experience />
       <Projects />
       <Skillset />
       <AboutMe />

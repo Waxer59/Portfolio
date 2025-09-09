@@ -3,6 +3,25 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Watch Me',
+    description: {
+      es: 'Plataforma de streaming en directo con chat en tiempo real y gestión de canales, al estilo de Twitch.',
+      en: 'Live streaming platform with real-time chat and channel management, similar to Twitch.'
+    },
+    tags: [
+      TAGS.nextjs!,
+      TAGS.typescript!,
+      TAGS.tailwind!,
+      TAGS.golang!,
+      TAGS.mux!
+    ],
+    imgFile: 'watchme.webp',
+    links: {
+      github: 'https://github.com/Waxer59/WatchMe',
+      preview: 'https://watchme.hgo.one'
+    }
+  },
+  {
     title: 'Smll',
     description: {
       es: 'Acortador diseñado para compartir enlaces de forma sencilla, con métricas, seguridad y más. ¡Todo en un solo lugar!',
@@ -24,8 +43,8 @@ export const projects: ProjectDetails[] = [
   {
     title: 'Just Ask',
     description: {
-      es: 'Plataforma avanzada para la simulación de entrevistas laborales.',
-      en: 'Advanced platform for simulating job interviews.'
+      es: 'Plataforma avanzada para la simulación de entrevistas laborales potenciadas por IA.',
+      en: 'Advanced platform for simulating job interviews powered by AI.'
     },
     tags: [
       TAGS.astro!,
@@ -68,7 +87,8 @@ export const projects: ProjectDetails[] = [
     tags: [TAGS.nextjs!, TAGS.typescript!, TAGS.tailwind!, TAGS.openai!],
     imgFile: 'asobu.webp',
     links: {
-      github: 'https://github.com/Waxer59/Asobu'
+      github: 'https://github.com/Waxer59/Asobu',
+      preview: "https://asobu.hgo.one"
     }
   },
   {

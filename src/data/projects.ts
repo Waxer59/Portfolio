@@ -5,8 +5,8 @@ export const projects: ProjectDetails[] = [
   {
     title: 'Watch Me',
     description: {
-      es: 'Plataforma de streaming en directo con chat en tiempo real y gestión de canales, al estilo de Twitch.',
-      en: 'Live streaming platform with real-time chat and channel management, similar to Twitch.'
+      es: 'Plataforma de streaming en directo con chat en tiempo real y ¡mucho más!, al estilo de <strong>Twitch</strong>.',
+      en: 'Live streaming platform with real-time chat and much more!, similar to <strong>Twitch</strong>.'
     },
     tags: [
       TAGS.nextjs!,

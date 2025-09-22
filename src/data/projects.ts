@@ -54,6 +54,7 @@ export const projects: ProjectDetails[] = [
       TAGS.react!,
       TAGS.typescript!,
       TAGS.tailwind!,
+      TAGS.postgresql!,
       TAGS.gemini!
     ],
     imgFile: 'justAsk.webp',

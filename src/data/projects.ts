@@ -13,7 +13,10 @@ export const projects: ProjectDetails[] = [
       TAGS.typescript!,
       TAGS.tailwind!,
       TAGS.golang!,
-      TAGS.mux!
+      TAGS.mux!,
+      TAGS.postgresql!,
+      TAGS.redis!,
+      TAGS.docker!
     ],
     imgFile: 'watchme.webp',
     links: {
@@ -88,7 +91,7 @@ export const projects: ProjectDetails[] = [
     imgFile: 'asobu.webp',
     links: {
       github: 'https://github.com/Waxer59/Asobu',
-      preview: "https://asobu.hgo.one"
+      preview: 'https://asobu.hgo.one'
     }
   },
   {

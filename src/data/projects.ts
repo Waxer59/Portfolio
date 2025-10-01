@@ -3,6 +3,26 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Subsly',
+    description: {
+      es: 'Plataforma para la gestion de gastos de suscripciones.',
+      en: 'Platform for subscription management.'
+    },
+    tags: [
+      TAGS.java!,
+      TAGS.spring!,
+      TAGS.angular!,
+      TAGS.tailwind!,
+      TAGS.postgresql!,
+      TAGS.docker!
+    ],
+    imgFile: 'subsly.webp',
+    links: {
+      github: 'https://github.com/Waxer59/Subsly',
+      preview: 'https://subsly.hgo.one'
+    }
+  },
+  {
     title: 'Watch Me',
     description: {
       es: 'Plataforma de streaming en directo con chat en tiempo real y ¡mucho más!, al estilo de <strong>Twitch</strong>.',

@@ -23,6 +23,7 @@ import MuxIcon from '@/components/icons/MuxIcon.astro'
 import AngularIcon from '@/components/icons/AngularIcon.astro'
 import JavaIcon from '@/components/icons/JavaIcon.astro'
 import SpringIcon from '@/components/icons/SpringIcon.astro'
+import ChromeIcon from '@/components/icons/ChromeIcon.astro'
 
 export const TAGS: TagKeyDetails = {
   nextjs: {
@@ -144,5 +145,10 @@ export const TAGS: TagKeyDetails = {
     name: 'Spring',
     class: 'bg-green-900 text-white',
     icon: SpringIcon
+  },
+  chrome: {
+    name: 'Chrome',
+    class: 'bg-yellow-700 text-white',
+    icon: ChromeIcon
   }
 }

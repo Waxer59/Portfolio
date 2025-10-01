@@ -12,6 +12,8 @@ export const projects: ProjectDetails[] = [
       TAGS.java!,
       TAGS.spring!,
       TAGS.angular!,
+      TAGS.react!,
+      TAGS.chrome!,
       TAGS.tailwind!,
       TAGS.postgresql!,
       TAGS.docker!

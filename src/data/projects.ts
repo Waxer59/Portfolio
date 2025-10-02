@@ -170,7 +170,7 @@ export const projects: ProjectDetails[] = [
       en: 'Playground for <strong>JavaScript</strong> that executes your code and shows you the results instantly, in addition to offering many more features.'
     },
     tags: [TAGS.react!, TAGS.redux!, TAGS.electron!, TAGS.openai!],
-    imgFile: 'dinamicjs.webp',
+    imgFile: 'dinamicjs-desktop.webp',
     links: {
       github: 'https://github.com/Waxer59/DinamicJs-Desktop'
     }

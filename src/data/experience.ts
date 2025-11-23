@@ -2,6 +2,12 @@ export const experience = {
   es: [
     {
       company: 'NTT Data',
+      position: 'Ingeniero Junior',
+      period: 'Noviembre 2025 - Actualmente',
+      description: ''
+    },
+    {
+      company: 'NTT Data',
       position: 'Practicas Desarrollador Backend',
       period: 'Marzo 2025 - Junio 2025',
       description:
@@ -9,6 +15,12 @@ export const experience = {
     }
   ],
   en: [
+    {
+      company: 'NTT Data',
+      position: 'Junior Engineer',
+      period: 'November 2025 - Currently',
+      description: ''
+    },
     {
       company: 'NTT Data',
       position: 'Backend Developer Internship',

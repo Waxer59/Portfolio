@@ -4,7 +4,7 @@ export const experience = {
       company: 'NTT Data',
       position: 'Ingeniero Junior',
       period: 'Noviembre 2025 - Actualmente',
-      description: ''
+      description: 'Desarrollador backend para el sector bancario.'
     },
     {
       company: 'NTT Data',
@@ -19,7 +19,7 @@ export const experience = {
       company: 'NTT Data',
       position: 'Junior Engineer',
       period: 'November 2025 - Currently',
-      description: ''
+      description: 'Backend developer for the banking industry.'
     },
     {
       company: 'NTT Data',

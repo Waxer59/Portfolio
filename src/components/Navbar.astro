@@ -77,16 +77,14 @@ const t = useTranslations(lang)
   })
 
   btnMenu.addEventListener('click', () => {
-    // @ts-expect-error View transitions API is not embedded in Ts definition yet
-    if (!document.startViewTransition) showMenu()
-    // @ts-expect-error View transitions API is not embedded in Ts definition yet
-    document.startViewTransition(showMenu)
+    // if (!document.startViewTransition) showMenu()
+    // document.startViewTransition(showMenu)
+    showMenu()
   })
 
   btnMenuClose.addEventListener('click', () => {
-    // @ts-expect-error View transitions API is not embedded in Ts definition yet
-    if (!document.startViewTransition) hideMenu()
-    // @ts-expect-error View transitions API is not embedded in Ts definition yet
-    document.startViewTransition(hideMenu)
+    // if (!document.startViewTransition) hideMenu()
+    // document.startViewTransition(hideMenu)
+    hideMenu()
   })
 </script>

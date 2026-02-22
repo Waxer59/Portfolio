@@ -18,8 +18,11 @@ const t = useTranslations(lang)
 
 <script>
   const LOCAL_STORAGE_THEME_KEY = 'theme'
-  const themeValue = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
+  // const themeValue = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
   const html = document.querySelector('html') as HTMLElement
+  const btnThemeToggler = document.querySelector(
+    '#btn-theme-toggler'
+  ) as HTMLButtonElement
 
   enum THEMES {
     dark = 'dark',
@@ -42,35 +45,42 @@ const t = useTranslations(lang)
 
     if (isDarkTheme || !currentTheme) {
       setThemePreference(THEMES.light)
+      html.classList.remove(THEMES.dark)
     } else {
       setThemePreference(THEMES.dark)
+      html.classList.add(THEMES.dark)
     }
   }
 
-  document.addEventListener('astro:after-swap', () => {
-    const selectedTheme = localStorage.getItem(
-      LOCAL_STORAGE_THEME_KEY
-    ) as THEMES
-    setThemePreference(selectedTheme)
+  btnThemeToggler.addEventListener('click', () => {
+    console.log('HERE')
+    switchTheme()
   })
 
-  document.addEventListener('astro:page-load', () => {
-    const btnThemeToggler = document.querySelector(
-      '#btn-theme-toggler'
-    ) as HTMLButtonElement
+  // document.addEventListener('astro:after-swap', () => {
+  //   const selectedTheme = localStorage.getItem(
+  //     LOCAL_STORAGE_THEME_KEY
+  //   ) as THEMES
+  //   setThemePreference(selectedTheme)
+  // })
 
-    btnThemeToggler.addEventListener('click', () => {
-      // @ts-expect-error View transitions API is not embedded in Ts definition yet
-      if (!document.startViewTransition) switchTheme()
-      // @ts-expect-error View transitions API is not embedded in Ts definition yet
-      document.startViewTransition(switchTheme)
-    })
-  })
+  // document.addEventListener('astro:page-load', () => {
+  //   const btnThemeToggler = document.querySelector(
+  //     '#btn-theme-toggler'
+  //   ) as HTMLButtonElement
 
-  if (themeValue === THEMES.light) {
-    // @ts-expect-error View transitions API is not embedded in Ts definition yet
-    if (!document.startViewTransition) setThemePreference(THEMES.light)
-    // @ts-expect-error View transitions API is not embedded in Ts definition yet
-    document.startViewTransition(() => setThemePreference(THEMES.light))
-  }
+  //   btnThemeToggler.addEventListener('click', () => {
+  //     // @ts-expect-error View transitions API is not embedded in Ts definition yet
+  //     if (!document.startViewTransition) switchTheme()
+  //     // @ts-expect-error View transitions API is not embedded in Ts definition yet
+  //     document.startViewTransition(switchTheme)
+  //   })
+  // })
+
+  // if (themeValue === THEMES.light) {
+  //   // @ts-expect-error View transitions API is not embedded in Ts definition yet
+  //   if (!document.startViewTransition) setThemePreference(THEMES.light)
+  //   // @ts-expect-error View transitions API is not embedded in Ts definition yet
+  //   document.startViewTransition(() => setThemePreference(THEMES.light))
+  // }
 </script>

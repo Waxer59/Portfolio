@@ -1,7 +1,6 @@
 ---
 import '@styles/global.css'
 import { Head } from 'astro-capo'
-import { ViewTransitions } from 'astro:transitions'
 import { cannonicalURL } from '@/constants/seo'
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
 
@@ -62,6 +61,4 @@ const ogImage = cannonicalURL + '/images/og.png'
   <meta property="og:site_name" content={title} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content={localeCode[currentLang]} />
-
-  <ViewTransitions />
 </Head>

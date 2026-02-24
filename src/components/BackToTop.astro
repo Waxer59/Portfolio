@@ -18,27 +18,25 @@ const t = useTranslations(lang)
 <script>
   const DISPLAY = { BLOCK: 'block', NONE: 'none' } as const
 
-  document.addEventListener('astro:page-load', () => {
-    const btnBackToTop = document.querySelector(
-      '#btn-back-to-top'
-    ) as HTMLButtonElement
+  // document.addEventListener('astro:page-load', () => {
+  // })
 
-    btnBackToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    })
+  const btnBackToTop = document.querySelector(
+    '#btn-back-to-top'
+  ) as HTMLButtonElement
 
-    window.addEventListener('scroll', () => {
-      const scrollTop =
-        document.body.scrollTop || document.documentElement.scrollTop
-      const display = scrollTop > 20 ? DISPLAY.BLOCK : DISPLAY.NONE
+  btnBackToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
 
-      if (btnBackToTop) {
-        btnBackToTop.classList.toggle('opacity-0', display === DISPLAY.NONE)
-        btnBackToTop.classList.toggle(
-          'cursor-default',
-          display === DISPLAY.NONE
-        )
-      }
-    })
+  window.addEventListener('scroll', () => {
+    const scrollTop =
+      document.body.scrollTop || document.documentElement.scrollTop
+    const display = scrollTop > 20 ? DISPLAY.BLOCK : DISPLAY.NONE
+
+    if (btnBackToTop) {
+      btnBackToTop.classList.toggle('opacity-0', display === DISPLAY.NONE)
+      btnBackToTop.classList.toggle('cursor-default', display === DISPLAY.NONE)
+    }
   })
 </script>

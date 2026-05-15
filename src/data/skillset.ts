@@ -148,7 +148,7 @@ const backend: SkillsetDetails = {
       icon: MysqlIcon
     },
     {
-      name: 'Oracle DB',
+      name: 'OracleDB',
       icon: OracleIcon
     },
     {

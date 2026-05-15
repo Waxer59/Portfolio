@@ -2,12 +2,11 @@
 import { Image } from 'astro:assets'
 import { email, github, linkedin } from '@/data/personal'
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
+import { Mail, Rss } from '@lucide/astro'
 import Hugo from '../images/hugo.jpg'
 import SocialLink from '@components/SocialLink.astro'
-import GithubIcon from '@components/icons/GithubIcon.astro'
-import LinkedinIcon from '@components/icons/LinkedinIcon.astro'
-import MailIcon from '@components/icons/MailIcon.astro'
-import RssIcon from '@components/icons/RssIcon.astro'
+import GithubIcon from '@components/icons/technologies/GithubIcon.astro'
+import LinkedinIcon from '@components/icons/technologies/LinkedinIcon.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -31,7 +30,7 @@ const t = useTranslations(lang)
     <ul class="list-none flex items-center gap-6 flex-wrap">
       <li>
         <SocialLink href={`mailto:${email}`}
-          ><MailIcon /> {t('hero.contactMe')}</SocialLink
+          ><Mail /> {t('hero.contactMe')}</SocialLink
         >
       </li>
       <li>
@@ -41,7 +40,7 @@ const t = useTranslations(lang)
         <SocialLink href={github}><GithubIcon /> Github</SocialLink>
       </li>
       <li>
-        <SocialLink href="https://blog.hgo.one"><RssIcon /> Blog</SocialLink>
+        <SocialLink href="https://blog.hgo.one"><Rss /> Blog</SocialLink>
       </li>
     </ul>
   </div>

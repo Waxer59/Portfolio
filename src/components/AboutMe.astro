@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
-import UserIcon from './icons/UserIcon.astro'
+import { User } from '@lucide/astro'
 import HugoAboutMe from '../images/hugo_about_me.webp'
 
 const lang = getLangFromUrl(Astro.url)
@@ -12,7 +12,7 @@ const t = useTranslations(lang)
   <h2
     class="text-tertiary text-3xl font-bold uppercase tracking-wider flex items-center gap-4"
     id={t('nav.aboutMe')}>
-    <UserIcon class="w-9 h-9 hidden sm:inline-block" />
+    <User class="w-9 h-9 hidden sm:inline-block" />
     {t('nav.aboutMe')}
   </h2>
   <article

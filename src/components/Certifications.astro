@@ -1,0 +1,45 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils'
+import { ScrollText } from '@lucide/astro'
+import { certifications } from '@/data/certifications'
+import AwsIcon from '@components/icons/technologies/AwsIcon.astro'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+---
+
+<section>
+  <h2
+    class="text-tertiary text-3xl font-bold uppercase tracking-wider flex items-center gap-4"
+    id={t('nav.certifications')}>
+    <ScrollText class="w-9 h-9 hidden sm:inline-block" />
+    {t('nav.certifications')}
+  </h2>
+
+  <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+    {
+      certifications[lang].map((cert) => (
+        <li class="p-4 rounded-md border border-secondary dark:border-gray-700 hover:border-accent transition-colors">
+          <a href={cert.link} target="_blank" rel="noreferrer">
+            <div class="flex items-start gap-4">
+              <AwsIcon class="w-8 h-8 flex-none" />
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {cert.title}
+                </h3>
+                <p class="text-secondary">{cert.issuer}</p>
+                <p class="text-sm text-secondary">
+                  <span class="font-medium">{t('cert.issued')}</span>{' '}
+                  {cert.issued}
+                  <span class="mx-2">·</span>
+                  <span class="font-medium">{t('cert.expires')}</span>{' '}
+                  {cert.expires}
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -1,7 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '@/i18n/utils'
-import MoonIcon from '@components/icons/MoonIcon.astro'
-import SunIcon from '@components/icons/SunIcon.astro'
+import { Moon, Sun } from '@lucide/astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -9,10 +8,10 @@ const t = useTranslations(lang)
 
 <button id="btn-theme-toggler" aria-label={t('aria.switchTheme')}>
   <span id="theme-toggler-dark-icon" class="hidden dark:block">
-    <MoonIcon class="hover:text-accent transition-colors" />
+    <Moon class="hover:text-accent transition-colors" />
   </span>
   <span id="theme-toggler-light-icon" class="block dark:hidden">
-    <SunIcon class="hover:text-accent transition-colors" />
+    <Sun class="hover:text-accent transition-colors" />
   </span>
 </button>
 
@@ -23,10 +22,17 @@ const t = useTranslations(lang)
   const btnThemeToggler = document.querySelector(
     '#btn-theme-toggler'
   ) as HTMLButtonElement
+  const selectedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
 
   enum THEMES {
     dark = 'dark',
     light = 'light'
+  }
+
+  if (selectedTheme === THEMES.dark) {
+    html.classList.add(THEMES.dark)
+  } else if (selectedTheme === THEMES.light) {
+    html.classList.remove(THEMES.dark)
   }
 
   const setThemePreference = (theme: THEMES) => {

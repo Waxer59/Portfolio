@@ -1,9 +1,8 @@
 ---
 import { getLangFromUrl, useTranslations } from '@i18n/utils'
+import { Menu, X } from '@lucide/astro'
 import LanguageSwitch from './LanguageSwitch.astro'
 import ThemeToggler from './ThemeToggler.astro'
-import HamburguerMenuIcon from './icons/HamburguerMenuIcon.astro'
-import XMarkIcon from './icons/XMarkIcon.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -18,7 +17,7 @@ const t = useTranslations(lang)
     <button
       id="btn-menu-close"
       class="hover:text-accent ml-auto md:hidden transition-colors"
-      aria-label={t('aria.closeMenu')}><XMarkIcon class="w-9 h-9" /></button
+      aria-label={t('aria.closeMenu')}><X class="w-9 h-9" /></button
     >
     <a
       href={`#${t('nav.experience')}`}
@@ -40,7 +39,7 @@ const t = useTranslations(lang)
     <button
       id="btn-menu"
       class="block md:hidden cursor-pointer hover:text-accent transition-colors"
-      aria-label={t('aria.closeMenu')}><HamburguerMenuIcon /></button
+      aria-label={t('aria.closeMenu')}><Menu /></button
     >
     <LanguageSwitch />
     <ThemeToggler />

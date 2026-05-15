@@ -1,44 +1,44 @@
-import AngularIcon from '@/components/icons/AngularIcon.astro'
-import AstroDarkIcon from '@/components/icons/AstroDarkIcon.astro'
-import AstroLightIcon from '@/components/icons/AstroLightIcon.astro'
-import AwsIcon from '@/components/icons/AwsIcon.astro'
-import BookIcon from '@/components/icons/BookIcon.astro'
-import CloudIcon from '@/components/icons/CloudIcon.astro'
-import CssIcon from '@/components/icons/CssIcon.astro'
-import DockerIcon from '@/components/icons/DockerIcon.astro'
-import ElectronIcon from '@/components/icons/ElectronIcon.astro'
-import ExpressIcon from '@/components/icons/ExpressIcon.astro'
-import FirebaseIcon from '@/components/icons/FirebaseIcon.astro'
-import GithubLogoIcon from '@/components/icons/GithubLogoIcon.astro'
-import GitIcon from '@/components/icons/GitIcon.astro'
-import GoIcon from '@/components/icons/GoIcon.astro'
-import GraphqlIcon from '@/components/icons/GraphqlIcon.astro'
-import HtmlIcon from '@/components/icons/HtmlIcon.astro'
-import JavaIcon from '@/components/icons/JavaIcon.astro'
-import JavascriptIcon from '@/components/icons/JavascriptIcon.astro'
-import JestIcon from '@/components/icons/JestIcon.astro'
-import MongodbIcon from '@/components/icons/MongodbIcon.astro'
-import MonitorIcon from '@/components/icons/MonitorIcon.astro'
-import MysqlIcon from '@/components/icons/MysqlIcon.astro'
-import NestjsIcon from '@/components/icons/NestjsIcon.astro'
-import NextjsIcon from '@/components/icons/NextjsIcon.astro'
-import NodejsIcon from '@/components/icons/NodejsIcon.astro'
-import PostgresqlIcon from '@/components/icons/PostgresqlIcon.astro'
-import ReactIcon from '@/components/icons/ReactIcon.astro'
-import RedisIcon from '@/components/icons/RedisIcon.astro'
-import ReduxIcon from '@/components/icons/ReduxIcon.astro'
-import SassIcon from '@/components/icons/SassIcon.astro'
-import ServerIcon from '@/components/icons/ServerIcon.astro'
-import SocketioIcon from '@/components/icons/SocketioIcon.astro'
-import SpringIcon from '@/components/icons/SpringIcon.astro'
-import TailwindIcon from '@/components/icons/TailwindIcon.astro'
-import TypeScriptIcon from '@/components/icons/TypeScriptIcon.astro'
-import VitestIcon from '@/components/icons/VitestIcon.astro'
+import AngularIcon from '@/components/icons/technologies/AngularIcon.astro'
+import AstroDarkIcon from '@/components/icons/technologies/AstroDarkIcon.astro'
+import AstroLightIcon from '@/components/icons/technologies/AstroLightIcon.astro'
+import AwsIcon from '@/components/icons/technologies/AwsIcon.astro'
+import CssIcon from '@/components/icons/technologies/CssIcon.astro'
+import DockerIcon from '@/components/icons/technologies/DockerIcon.astro'
+import ElectronIcon from '@/components/icons/technologies/ElectronIcon.astro'
+import ExpressIcon from '@/components/icons/technologies/ExpressIcon.astro'
+import FirebaseIcon from '@/components/icons/technologies/FirebaseIcon.astro'
+import GithubLogoIcon from '@/components/icons/technologies/GithubLogoIcon.astro'
+import GitIcon from '@/components/icons/technologies/GitIcon.astro'
+import GoIcon from '@/components/icons/technologies/GoIcon.astro'
+import GraphqlIcon from '@/components/icons/technologies/GraphqlIcon.astro'
+import HtmlIcon from '@/components/icons/technologies/HtmlIcon.astro'
+import JavaIcon from '@/components/icons/technologies/JavaIcon.astro'
+import JavascriptIcon from '@/components/icons/technologies/JavascriptIcon.astro'
+import JestIcon from '@/components/icons/technologies/JestIcon.astro'
+import MongodbIcon from '@/components/icons/technologies/MongodbIcon.astro'
+import MysqlIcon from '@/components/icons/technologies/MysqlIcon.astro'
+import NestjsIcon from '@/components/icons/technologies/NestjsIcon.astro'
+import NextjsIcon from '@/components/icons/technologies/NextjsIcon.astro'
+import NodejsIcon from '@/components/icons/technologies/NodejsIcon.astro'
+import PostgresqlIcon from '@/components/icons/technologies/PostgresqlIcon.astro'
+import ReactIcon from '@/components/icons/technologies/ReactIcon.astro'
+import RedisIcon from '@/components/icons/technologies/RedisIcon.astro'
+import ReduxIcon from '@/components/icons/technologies/ReduxIcon.astro'
+import SassIcon from '@/components/icons/technologies/SassIcon.astro'
+import SocketioIcon from '@/components/icons/technologies/SocketioIcon.astro'
+import SpringIcon from '@/components/icons/technologies/SpringIcon.astro'
+import TailwindIcon from '@/components/icons/technologies/TailwindIcon.astro'
+import TypeScriptIcon from '@/components/icons/technologies/TypeScriptIcon.astro'
+import VitestIcon from '@/components/icons/technologies/VitestIcon.astro'
+import { Book, Monitor, Server, Cloud } from '@lucide/astro'
 import type { SkillsetDetails } from '@/types/types'
+import OracleIcon from '@/components/icons/technologies/OracleIcon.astro'
+import SparkIcon from '@/components/icons/technologies/SparkIcon.astro'
+import GrpcIcon from '@/components/icons/technologies/GrpcIcon.astro'
 
 const languages: SkillsetDetails = {
   name: 'Languages',
-  icon: BookIcon,
+  icon: Book,
   items: [
     {
       name: 'JavaScript',
@@ -63,7 +63,7 @@ const languages: SkillsetDetails = {
 
 const frontend: SkillsetDetails = {
   name: 'Frontend',
-  icon: MonitorIcon,
+  icon: Monitor,
   items: [
     {
       name: 'HTML',
@@ -111,11 +111,16 @@ const frontend: SkillsetDetails = {
 
 const backend: SkillsetDetails = {
   name: 'Backend',
-  icon: ServerIcon,
+  icon: Server,
   items: [
     {
       name: 'NodeJS',
       icon: NodejsIcon
+    },
+    {
+      name: 'Grpc',
+      icon: GrpcIcon,
+      className: 'dark:invert'
     },
     {
       name: 'ExpressJS',
@@ -143,8 +148,16 @@ const backend: SkillsetDetails = {
       icon: MysqlIcon
     },
     {
+      name: 'Oracle DB',
+      icon: OracleIcon
+    },
+    {
       name: 'Redis',
       icon: RedisIcon
+    },
+    {
+      name: 'Spark',
+      icon: SparkIcon
     },
     {
       name: 'Firebase',
@@ -164,7 +177,7 @@ const backend: SkillsetDetails = {
 
 const devops: SkillsetDetails = {
   name: 'Devops',
-  icon: CloudIcon,
+  icon: Cloud,
   items: [
     {
       name: 'Docker',

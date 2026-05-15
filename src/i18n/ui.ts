@@ -11,6 +11,7 @@ export const ui = {
     'nav.projects': 'Proyectos',
     'nav.skillset': 'Conocimientos',
     'nav.experience': 'Experiencia',
+    'nav.certifications': 'Certificaciones',
     'nav.aboutMe': 'Sobre mi',
     'nav.contact': 'Contacto',
     'project.code': 'Código',
@@ -32,13 +33,16 @@ export const ui = {
     'aria.closeMenu': 'Cerrar menú',
     'aria.switchTheme': 'Cambiar tema',
     seeMore: 'Ver más',
-    seeLess: 'Ver menos'
+    seeLess: 'Ver menos',
+    'cert.issued': 'Emitido:',
+    'cert.expires': 'Expira:'
   },
   en: {
     'page.title': "Hugo's portfolio - Software Developer",
     'nav.projects': 'Projects',
     'nav.skillset': 'Skillset',
     'nav.experience': 'Experience',
+    'nav.certifications': 'Certifications',
     'nav.aboutMe': 'About me',
     'nav.contact': 'Contact',
     'project.code': 'Code',
@@ -59,6 +63,8 @@ export const ui = {
     'aria.closeMenu': 'Close menu',
     'aria.switchTheme': 'Switch theme',
     seeMore: 'See more',
-    seeLess: 'See less'
+    seeLess: 'See less',
+    'cert.issued': 'Issued:',
+    'cert.expires': 'Expires:'
   }
 } as const

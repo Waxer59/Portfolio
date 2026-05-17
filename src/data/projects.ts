@@ -3,6 +3,27 @@ import type { ProjectDetails } from '@/types/types'
 
 export const projects: ProjectDetails[] = [
   {
+    title: 'Code Rush',
+    description: {
+      es: 'Plataforma de retos de programación como <strong>LeetCode</strong>, para mejorar tus habilidades de programación.',
+      en: 'Programming challenge platform like <strong>LeetCode</strong>, to improve your programming skills.'
+    },
+    tags: [
+      TAGS.nextjs!,
+      TAGS.typescript!,
+      TAGS.tailwind!,
+      TAGS.java!,
+      TAGS.spring!,
+      TAGS.postgresql!,
+      TAGS.docker!
+    ],
+    imgFile: 'codeRush.webp',
+    links: {
+      github: 'https://github.com/Waxer59/CodeRush',
+      preview: 'https://coderush.hgo.one'
+    }
+  },
+  {
     title: 'Subsly',
     description: {
       es: 'Plataforma para la gestion de gastos de suscripciones.',
